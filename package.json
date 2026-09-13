@@ -1,6 +1,6 @@
 {
   "name": "obsidian-html-embed",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Embed vault HTML files inline in notes via a sandboxed, auto-resizing iframe.",
   "main": "main.js",
   "private": true,
