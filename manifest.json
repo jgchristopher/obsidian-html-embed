@@ -1,0 +1,10 @@
+{
+  "id": "html-embed",
+  "name": "HTML Embed",
+  "version": "0.1.0",
+  "minAppVersion": "1.0.0",
+  "description": "Embed vault HTML files inline in notes via a sandboxed, auto-resizing iframe.",
+  "author": "John Christopher",
+  "authorUrl": "https://jdotc.xyz",
+  "isDesktopOnly": false
+}
