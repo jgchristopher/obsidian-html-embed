@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>html-embed fixture: tall</title>
+<style>
+  :root { --bg: #fdf6e3; --fg: #073642; --accent: #268bd2; }
+  :root[data-theme="dark"] { --bg: #1a1b26; --fg: #c0caf5; --accent: #7aa2f7; }
+  body { margin: 0; padding: 24px; background: var(--bg); color: var(--fg); font: 20px/1.5 system-ui, sans-serif; }
+  section { height: 400px; border: 3px dashed var(--accent); margin-bottom: 24px; padding: 16px; box-sizing: border-box; }
+</style>
+</head>
+<body>
+  <h1>Theme: <span id="theme"></span></h1>
+  <p id="isolation">checking isolation…</p>
+  <section>Section 1</section>
+  <section>Section 2</section>
+  <section>Section 3</section>
+  <section>Section 4: this bottom border must be fully visible with no inner scrollbar</section>
+  <script>
+    document.getElementById("theme").textContent = document.documentElement.dataset.theme || "(none)";
+    var out = document.getElementById("isolation");
+    try { out.textContent = "NOT ISOLATED: parent title = " + parent.document.title; }
+    catch (e) { out.textContent = "isolated: " + e.name; }
+  </script>
+</body>
+</html>
